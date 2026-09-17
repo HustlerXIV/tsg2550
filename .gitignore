@@ -1,0 +1,50 @@
+# ---- dependencies ----
+node_modules/
+.pnpm-store/
+.yarn/
+.pnp.*
+
+# ---- next.js ----
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# ---- env / secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- logs ----
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- test / coverage ----
+coverage/
+.nyc_output/
+
+# ---- editor / tooling ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+.eslintcache
+.turbo/
+
+# ---- os junk (สำคัญ: macOS แอบสร้าง .DS_Store ทุกโฟลเดอร์) ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ---- deploy / local ----
+*.pem
+*.key
+_to_delete/

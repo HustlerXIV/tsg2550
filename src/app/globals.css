@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --color-brand: #7A1F2B;
+  --color-brand-dark: #4A1319;
+  --color-gold: #C9A24B;
+  --color-gold-light: #E4C177;
+  --color-gold-dark: #A9822F;
+  --color-cream: #F7F5F0;
+  --color-cream-dark: #EFEBE1;
+  --color-line-soft: #E7E2D8;
+  --color-ink: #1B1F27;
+  --color-ink-soft: #3A4152;
+  --color-muted: #5B6472;
+  --color-muted-light: #8B98AF;
+  --color-onbrand: #B9C2D2;
+  --color-onbrand-soft: #C7CEDA;
+
+  --font-sans: "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif Thai", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  line-height: 1.7;
+}

@@ -1,0 +1,31 @@
+# ---- dependencies (ติดตั้งใหม่ใน image เสมอ) ----
+node_modules
+.pnpm-store
+
+# ---- build output ของเครื่อง dev (สถาปัตยกรรมอาจไม่ตรงกับเซิร์ฟเวอร์) ----
+.next
+out
+build
+*.tsbuildinfo
+
+# ---- version control ----
+.git
+.gitignore
+
+# ---- env / secrets: ห้ามหลุดเข้า image ----
+.env
+.env.*
+
+# ---- เอกสาร / ไฟล์ deploy ที่ไม่เกี่ยวกับ build ----
+README.md
+DEPLOY.md
+nginx-tsg2550.conf
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# ---- logs / editor / os ----
+*.log
+.vscode
+.idea
+.DS_Store

@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    image: tsg2550-web
+    container_name: tsg2550-web
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=4187
+      - HOSTNAME=0.0.0.0
+    # nginx รันบน host (ไม่ได้อยู่ใน Docker) จึง resolve ชื่อ container ไม่ได้
+    # ต้อง publish port ออกมา แต่ผูกกับ 127.0.0.1 เท่านั้น — เข้าได้เฉพาะจาก
+    # เครื่องนี้ ไม่หลุดออกอินเทอร์เน็ต (ต่างจาก 0.0.0.0 ที่เปิดให้ทุกคน)
+    ports:
+      - "127.0.0.1:4187:4187"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:4187/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
