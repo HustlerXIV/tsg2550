@@ -9,7 +9,7 @@ export default function PageHero({
 }) {
   return (
     <section className="bg-brand text-white">
-      <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-[1248px] px-5 py-12 sm:px-6 sm:py-16">
         <div className="mb-2.5 text-[13px] tracking-[0.15em] text-gold">
           {eyebrow}
         </div>

@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-brand shadow-[0_2px_12px_rgba(0,0,0,0.15)]">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-5 py-3 sm:px-6 sm:py-3.5">
+      <div className="mx-auto flex max-w-[1248px] items-center justify-between gap-6 px-5 py-3 sm:px-6 sm:py-3.5">
         <Link href="/" className="flex shrink-0 items-center gap-3 no-underline">
           <Image
             src="/logo.png"
@@ -27,13 +27,13 @@ export default function Header() {
             width={598}
             height={776}
             priority
-            className="h-10 w-auto sm:h-12"
+            className="h-10 w-auto sm:h-[46px]"
           />
           <span className="block">
             <span className="block font-serif text-base font-bold tracking-wide text-white sm:text-lg">
               {SITE.nameTh}
             </span>
-            <span className="block text-[10px] tracking-[0.08em] text-gold sm:text-[11px]">
+            <span className="block text-[10px] tracking-[0.09em] text-gold sm:text-[11px]">
               {SITE.nameEn}
             </span>
           </span>
@@ -57,34 +57,34 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={`tel:${SITE.officePhoneTel}`}
-            className="hidden whitespace-nowrap rounded-sm bg-gold px-5 py-2.5 text-sm font-bold text-brand transition-colors hover:bg-gold-light sm:inline-block"
+          <Link
+            href="/contact"
+            className="hidden rounded-sm bg-gold px-5 py-2.5 text-sm font-bold whitespace-nowrap text-brand transition-colors hover:bg-gold-light lg:inline-block"
           >
-            โทรเลย
-          </a>
+            ขอใบเสนอราคา
+          </Link>
           <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            aria-label="เปิด/ปิดเมนู"
-            className="flex h-10 w-10 items-center justify-center rounded-sm text-white lg:hidden"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-              {open ? (
-                <>
-                  <path d="M18 6L6 18" />
-                  <path d="M6 6l12 12" />
-                </>
-              ) : (
-                <>
-                  <path d="M3 6h18" />
-                  <path d="M3 12h18" />
-                  <path d="M3 18h18" />
-                </>
-              )}
-            </svg>
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          aria-label="เปิด/ปิดเมนู"
+          className="flex h-10 w-10 items-center justify-center rounded-sm text-white lg:hidden"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            {open ? (
+              <>
+                <path d="M18 6L6 18" />
+                <path d="M6 6l12 12" />
+              </>
+            ) : (
+              <>
+                <path d="M3 6h18" />
+                <path d="M3 12h18" />
+                <path d="M3 18h18" />
+              </>
+            )}
+          </svg>
           </button>
         </div>
       </div>
@@ -94,7 +94,7 @@ export default function Header() {
         hidden={!open}
         className="border-t border-white/10 bg-brand lg:hidden"
       >
-        <div className="mx-auto flex max-w-[1200px] flex-col px-5 pb-4 sm:px-6">
+        <div className="mx-auto flex max-w-[1248px] flex-col px-5 pb-4 sm:px-6">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -109,10 +109,16 @@ export default function Header() {
           ))}
           <a
             href={`tel:${SITE.officePhoneTel}`}
-            className="mt-4 rounded-sm bg-gold px-5 py-3 text-center text-sm font-bold text-brand sm:hidden"
+            className="mt-4 rounded-sm border border-gold px-5 py-3 text-center text-sm font-bold text-gold"
           >
-            โทรเลย {SITE.officePhone}
+            โทร {SITE.officePhone}
           </a>
+          <Link
+            href="/contact"
+            className="mt-2 rounded-sm bg-gold px-5 py-3 text-center text-sm font-bold text-brand"
+          >
+            ขอใบเสนอราคา
+          </Link>
         </div>
       </nav>
     </header>

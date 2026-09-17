@@ -107,7 +107,7 @@ export default function ContactPage() {
         description="ติดต่อขอใบเสนอราคางานรักษาความปลอดภัย งานทำความสะอาด หรือสอบถามตำแหน่งงานว่าง"
       />
 
-      <section className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
+      <section className="mx-auto grid max-w-[1248px] gap-10 px-5 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
         <div>
           <h2 className="mb-6 font-serif text-2xl text-brand">ข้อมูลติดต่อ</h2>
           <div className="flex flex-col gap-6">
@@ -139,7 +139,7 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-cream-dark">
-        <div className="mx-auto grid max-w-[1200px] items-center gap-10 px-5 py-14 sm:px-6 sm:py-[72px] lg:grid-cols-2 lg:gap-14">
+        <div className="mx-auto grid max-w-[1248px] items-center gap-10 px-5 py-14 sm:px-6 sm:py-[72px] lg:grid-cols-2 lg:gap-14">
           <div>
             <div className="mb-3 text-[13px] font-bold tracking-[0.15em] text-gold-dark">
               ร่วมงานกับเรา

@@ -4,7 +4,7 @@ import { NAV_LINKS, SITE } from "@/lib/site";
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-sm text-onbrand">
-      <div className="mx-auto grid max-w-[1200px] gap-10 px-5 pt-12 pb-6 sm:px-6 sm:pt-14 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-[1248px] gap-10 px-5 pt-12 pb-6 sm:px-6 sm:pt-14 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
         <div>
           <div className="mb-3 font-serif text-[17px] font-bold text-white">
             {SITE.legalName}
